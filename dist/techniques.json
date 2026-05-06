@@ -1,0 +1,22 @@
+[
+  { "name": "ONLY ONES WHO KNOW", "points": 1, "effect": "Either everybody knows about your action or nobody does" },
+  { "name": "UNCANNY ALARM", "points": 2, "effect": "Ask the fates about an action's consequences" },
+  { "name": "WEAVE THROUGH WATER", "points": 3, "effect": "Walk or breathe through water" },
+  { "name": "MEMORY SEED", "points": 4, "effect": "Implant a false memory in someone" },
+  { "name": "FLOWMOTION", "points": 5, "effect": "Move fast—very fast" },
+  { "name": "SAVING GRACE", "points": 6, "effect": "Protect your allies by redirecting all damage to you" },
+  { "name": "INSPIRATION", "points": 7, "effect": "Improve someone's next action by buoying them with inspiration" },
+  { "name": "BIND MAGIC", "points": 8, "effect": "Prevent someone from using Spells & Techniques" },
+  { "name": "STONEWALL", "points": 9, "effect": "Reduce all damage. Grow a thick skin—figuratively or literally" },
+  { "name": "HEARTPIERCER", "points": 10, "effect": "Your damage ignores armor and defense" },
+  { "name": "DEADLY FOCUS", "points": 11, "effect": "Double your damage" },
+  { "name": "REDO", "points": 12, "effect": "Reroll the last Skill Check—whether yours or someone else's" },
+  { "name": "TURN THE TIDE", "points": 13, "effect": "Every action you take brings opportunity" },
+  { "name": "DISPEL", "points": 14, "effect": "Nullify the effects of a Spell or Technique" },
+  { "name": "INTERDICTION", "points": 15, "effect": "Bar an opponent from using one or multiple Approaches" },
+  { "name": "FLUORESCENT TRANSCENDENCE", "points": 16, "effect": "Enhance all Spells & Techniques for a brief moment" },
+  { "name": "NETHERWAVE", "points": 17, "effect": "A pulse of energy so strong it knocks everyone off their feet" },
+  { "name": "BECOME ONE", "points": 18, "effect": "Uncover and obtain the Spells & Techniques of another being" },
+  { "name": "DEFY THE FATES", "points": 21, "effect": "Rewind time" },
+  { "name": "DOOMPAUSE", "points": 24, "effect": "Hold off the Doom" }
+]

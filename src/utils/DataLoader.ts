@@ -42,11 +42,11 @@ export class DataLoader {
         try {
             // Fetch base lists
             const [damageRes, suppliesRes, odditiesRes, spellsRes, techniquesRes] = await Promise.all([
-                fetch('/data/damage-defense.json'),
-                fetch('/data/supplies.json'),
-                fetch('/data/oddities.json'),
-                fetch('/data/spells.json'),
-                fetch('/data/techniques.json')
+                fetch(`${import.meta.env.BASE_URL}data/damage-defense.json`),
+                fetch(`${import.meta.env.BASE_URL}data/supplies.json`),
+                fetch(`${import.meta.env.BASE_URL}data/oddities.json`),
+                fetch(`${import.meta.env.BASE_URL}data/spells.json`),
+                fetch(`${import.meta.env.BASE_URL}data/techniques.json`)
             ]);
 
             const damageData: JsonDamageDefense[] = await damageRes.json();
@@ -83,8 +83,8 @@ export class DataLoader {
             // --- LOAD FACTION ITEMS ---
             if (faction !== 'None') {
                 const factionFile = faction === 'Returner'
-                    ? '/data/factions/returner-items.json'
-                    : '/data/factions/swords-of-apsis-items.json';
+                    ? `${import.meta.env.BASE_URL}data/factions/returner-items.json`
+                    : `${import.meta.env.BASE_URL}data/factions/swords-of-apsis-items.json`;
 
                 const factionRes = await fetch(factionFile);
                 const factionData = await factionRes.json();
