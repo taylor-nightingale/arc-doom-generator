@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc: Doom Character Generator</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Vite will inject the script here automatically -->
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Arc: Doom Character Generator</h1>
+    </header>
+
+    <main>
+        <!-- UPDATED CONTROLS SECTION -->
+        <div class="controls">
+            <!-- FACTION SELECTION -->
+            <div class="faction-selection">
+                <label for="faction-select">Hero Origin:</label>
+                <select id="faction-select" class="faction-select">
+                    <option value="None">Standard Hero</option>
+                    <option value="Returner">Returner (New Items)</option>
+                    <option value="SwordsOfApsis">Swords of Apsis (New Items)</option>
+                </select>
+            </div>
+
+            <!-- SEED CONTROLS -->
+            <div class="seed-controls">
+                <input type="text" id="seed-input" placeholder="Enter seed (optional)" class="seed-input">
+                <button id="load-seed-btn" class="btn btn-secondary">Load Seed</button>
+            </div>
+
+            <!-- GENERATE BUTTON -->
+            <button id="generate-btn" class="btn btn-primary">Generate Random Character</button>
+        </div>
+
+        <div id="current-seed" class="seed-display">Seed: None</div>
+
+        <div id="character-sheet" class="character-sheet">
+            <p class="placeholder">Click "Generate Random Character" to create a new hero!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Based on Arc: Doom RPG rules</p>
+    </footer>
+</div>
+<script type="module" src="/src/index.ts"></script>
+</body>
+</html>

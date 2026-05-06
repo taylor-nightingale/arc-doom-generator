@@ -1,0 +1,37 @@
+[
+  {
+    "name": "The Returning Vow",
+    "points": 1,
+    "types": ["GutsDefense"],
+    "modifier": 2,
+    "description": "+2 Psychosocial Resist. You may choose to suffer Guts (instead of Blood) from physical trauma."
+  },
+  {
+    "name": "Eternal Corpse-Saint",
+    "points": 1,
+    "types": ["BloodDefense"],
+    "modifier": 2,
+    "description": "+2 Physical Resist. Regain +1 to Blood/Guts on Short Rest; +1 to rerolls on Long Rest."
+  },
+  {
+    "name": "Compass to Dawn",
+    "type": "spell",
+    "points": 1,
+    "effect": "Reveal the irradiated wounds of the world.",
+    "complexity": 2
+  },
+  {
+    "name": "Return the Blood-Tides",
+    "type": "spell",
+    "points": 1,
+    "effect": "Dematerialize, becoming invisible/incorporeal.",
+    "complexity": 2
+  },
+  {
+    "name": "Sap the Sun",
+    "type": "spell",
+    "points": 1,
+    "effect": "Transform fiery afflictions into a crystallized pearl.",
+    "complexity": 4
+  }
+]
