@@ -1,20 +1,17 @@
-import {Character, Backstory, Bonds, Bond, Faction} from './models/Character';
+import {Character, Backstory, Bonds, Bond} from './models/Character';
 import { ApproachGenerator } from './generators/ApproachGenerator';
 import { BloodGutsGenerator } from './generators/BloodGutsGenerator';
 import { SkillGenerator } from './generators/SkillGenerator';
 import { InventoryGenerator } from './generators/InventoryGenerator';
 import { BondGenerator } from './generators/BondGenerator';
 import { DiceRoller } from './generators/DiceRoller';
-import { DamageDefenseType } from './items/DamageDefenseItem';
-import {DataLoader} from "./utils/DataLoader";
+import {ItemLists} from "./items/ItemLists";
 
 export class CharacterGenerator {
-    static async generateRandom(faction: Faction = 'None'): Promise<Character> {
+    static async generateRandom(): Promise<Character> {
         const character = new Character();
-        character.faction = faction;
 
-        // Load data with the selected faction
-        await DataLoader.loadData(faction);
+        await ItemLists.loadData();
 
         character.name = this.generateRandomName();
         character.approachScores = ApproachGenerator.generateRandom();
@@ -57,8 +54,7 @@ function renderCharacterSheet(character: Character): void {
 
     characterSheet.innerHTML = `
     <h2>${character.name}</h2>
-    ${character.faction !== 'None' ? `<p class="faction-badge">Faction: <strong>${character.faction.replace(/([A-Z])/g, ' $1').trim()}</strong></p>` : ''}
-    
+        
     <div class="section">
       <h3>Approach Scores</h3>
       <p>Creative: ${character.approachScores.creative} | Careful: ${character.approachScores.careful} | Concerted: ${character.approachScores.concerted}</p>
@@ -170,16 +166,13 @@ document.addEventListener('DOMContentLoaded', () => {
         generateBtn.textContent = 'Generating...';
 
         try {
-            const factionSelect = document.getElementById('faction-select') as HTMLSelectElement;
-            const faction = factionSelect.value as Faction;
-
             if (!currentSeed) {
                 currentSeed = Math.random().toString(36).substring(2, 15);
                 DiceRoller.reseed(currentSeed);
                 currentSeedDisplay.textContent = `Seed: ${currentSeed} (Auto-generated)`;
             }
 
-            const character = await CharacterGenerator.generateRandom(faction);
+            const character = await CharacterGenerator.generateRandom();
             renderCharacterSheet(character);
             currentSeedDisplay.textContent = `Seed: ${currentSeed}`;
 

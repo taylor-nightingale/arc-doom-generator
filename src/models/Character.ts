@@ -3,8 +3,6 @@ import {BloodGuts} from "./BloodGuts";
 import {Skills} from "./Skills";
 import {Inventory} from "./Inventory";
 
-export type Faction = 'None' | 'Returner' | 'SwordsOfApsis';
-
 export class Backstory {
     difference: string = '';
     rumors: string = '';
@@ -41,7 +39,6 @@ export class Bonds {
 
 export class Character {
     name: string = '';
-    faction: Faction = 'None'; // NEW
     approachScores: ApproachScores = new ApproachScores();
     bloodGuts: BloodGuts = new BloodGuts();
     skills: Skills = new Skills();
