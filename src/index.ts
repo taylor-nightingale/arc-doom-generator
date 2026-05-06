@@ -30,9 +30,9 @@ export class CharacterGenerator {
         character.inventory = await InventoryGenerator.generateRandom(totalDice);
 
         character.backstory = {
-            difference: 'Unique in their own way',
-            rumors: 'Whispers in the tavern',
-            lesson: 'Loss teaches resilience'
+            difference: 'What makes them different from others?',
+            rumors: 'What are the three rumors about them? Who believes it?',
+            lesson: 'What was the most painful lesson your hero had to learn?'
         };
 
         character.bonds = BondGenerator.generateRandom();
@@ -109,12 +109,12 @@ function renderCharacterSheet(character: Character): void {
 
       <h4>Spells</h4>
       <ul>
-        ${character.inventory.spells.map(spell => `<li>${spell.name} (${spell.points} pts)</li>`).join('')}
+        ${character.inventory.spells.map(spell => `<li>${spell.name} (${spell.points} pts): ${spell.effect}</li>`).join('')}
       </ul>
 
       <h4>Techniques</h4>
       <ul>
-        ${character.inventory.techniques.map(tech => `<li>${tech.name} (${tech.points} pts)</li>`).join('')}
+        ${character.inventory.techniques.map(tech => `<li>${tech.name} (${tech.points} pts): ${tech.effect}</li>`).join('')}
       </ul>
     </div>
 
