@@ -13,5 +13,6 @@ export default defineConfig({
         }
     },
 
-    publicDir: 'data'
+    publicDir: 'data',
+    assetsInclude: ['**/*.json']
 });
