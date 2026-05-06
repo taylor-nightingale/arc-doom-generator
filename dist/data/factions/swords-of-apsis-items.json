@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Become the Sword",
+    "points": 1,
+    "types": ["BloodDamage", "BloodDefense"],
+    "modifier": 1,
+    "description": "+1 Physical Damage/Resist. Gain +1 Focus after inflicting Physical damage."
+  },
+  {
+    "name": "Uneclipsed Presence",
+    "points": 1,
+    "types": ["GutsDamage", "GutsDefense"],
+    "modifier": 1,
+    "description": "+1 Psychosocial Damage/Resist. Increase Psychosocial Resist by +1 after inflicting damage."
+  },
+  {
+    "name": "Everything Burns",
+    "type": "technique",
+    "points": 1,
+    "effect": "Sniff for combustible material / solar-fires.",
+    "complexity": 2
+  },
+  {
+    "name": "Wield the Sun-Sword",
+    "type": "technique",
+    "points": 1,
+    "effect": "Attacks inflicting Blood may inflict Guts.",
+    "complexity": 3
+  },
+  {
+    "name": "Master the Kindled Earth",
+    "type": "technique",
+    "points": 1,
+    "effect": "Erupt incandescent geysers; gain Become the Sword or Uneclipsed Presence.",
+    "complexity": 4
+  }
+]
